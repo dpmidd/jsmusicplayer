@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Music Player</title>
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Select a Song!</h1>
+  </header>
+
+  <div class="container tracks">
+
+    <script type="text/template" id="tracksTemplate">
+      {{#tracks}}
+      <article class="song-title">
+        <h2 data-title="{{title}}" data-id="{{id}}" class="fa fa-play sound">
+          <strong>  {{title}} by {{artist}}</strong>
+        </h2>
+        <audio id="{{id}}" src="audio/{{file}}.mp3" preload="none"></audio>
+      </article>
+      {{/tracks}}
+    </script>
+
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/mustache/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+  <script src="app.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
