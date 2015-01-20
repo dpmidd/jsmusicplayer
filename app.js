@@ -3,10 +3,10 @@
 $('.container').on('click', '.fa-play', function() {
 
   // Class .fa that is not the thing that was clicked - pause removed and play added
-  $('.fa').not(this).removeClass('fa-pause').addClass('fa-play');
+  $('.fa').not(this).removeClass('fa-stop').addClass('fa-play');
 
   // For the thing that was clicked - play is removed and pause is added
-  $(this).removeClass('fa-play').addClass('fa-pause');
+  $(this).removeClass('fa-play').addClass('fa-stop');
 
   // For the thing that was clicked, grab the value of the data title attribute and use it in h1 header
   var info = $(this).data('title');
@@ -30,9 +30,9 @@ $('.container').on('click', '.fa-play', function() {
 
 });
 
-$('.container').on('click', '.fa-pause', function(){
+$('.container').on('click', '.fa-stop', function(){
 
-  $(this).removeClass('fa-pause').addClass('fa-play');
+  $(this).removeClass('fa-stop').addClass('fa-play');
 
   var id = $(this).data('id');
 
